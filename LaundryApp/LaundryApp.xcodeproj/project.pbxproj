@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0B9FCD08A48C8E53FD4EBB13 /* Pods_LaundryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF49D695802B4FC24A5E2C7 /* Pods_LaundryApp.framework */; };
-		FA7B8CE52DDD9AC800CF23E7 /* CartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B8CE42DDD9AC800CF23E7 /* CartsVC.swift */; };
+		FA7B8CE72DDD9ECC00CF23E7 /* BasketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B8CE62DDD9ECC00CF23E7 /* BasketVC.swift */; };
+		FA7B8CEA2DDEEA6800CF23E7 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B8CE82DDEEA6800CF23E7 /* CartTableViewCell.swift */; };
+		FA7B8CEB2DDEEA6800CF23E7 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7B8CE92DDEEA6800CF23E7 /* CartTableViewCell.xib */; };
 		FA8445942DD871BF002A220E /* clothsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8445922DD871BF002A220E /* clothsCollectionViewCell.swift */; };
 		FA8445952DD871BF002A220E /* clothsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8445932DD871BF002A220E /* clothsCollectionViewCell.xib */; };
 		FA8D686F2DDB472E00CF8FAE /* DigitEntryView in Frameworks */ = {isa = PBXBuildFile; productRef = FA8D686E2DDB472E00CF8FAE /* DigitEntryView */; };
+		FAB324792DDF44830083EA3B /* cartSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB324772DDF44830083EA3B /* cartSectionTableViewCell.swift */; };
+		FAB3247A2DDF44830083EA3B /* cartSectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB324782DDF44830083EA3B /* cartSectionTableViewCell.xib */; };
 		FAF4934F2DD73AAE008A3034 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF4934E2DD73AAE008A3034 /* AppDelegate.swift */; };
 		FAF493512DD73AAE008A3034 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF493502DD73AAE008A3034 /* SceneDelegate.swift */; };
 		FAF493562DD73AAE008A3034 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF493542DD73AAE008A3034 /* Main.storyboard */; };
@@ -26,9 +30,13 @@
 		694ADCDEE899CE1F477A1F83 /* Pods-LaundryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaundryApp.release.xcconfig"; path = "Target Support Files/Pods-LaundryApp/Pods-LaundryApp.release.xcconfig"; sourceTree = "<group>"; };
 		DF3EC59036E6903779101D58 /* Pods-LaundryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaundryApp.debug.xcconfig"; path = "Target Support Files/Pods-LaundryApp/Pods-LaundryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EEF49D695802B4FC24A5E2C7 /* Pods_LaundryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaundryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA7B8CE42DDD9AC800CF23E7 /* CartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartsVC.swift; sourceTree = "<group>"; };
+		FA7B8CE62DDD9ECC00CF23E7 /* BasketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketVC.swift; sourceTree = "<group>"; };
+		FA7B8CE82DDEEA6800CF23E7 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		FA7B8CE92DDEEA6800CF23E7 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		FA8445922DD871BF002A220E /* clothsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clothsCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA8445932DD871BF002A220E /* clothsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = clothsCollectionViewCell.xib; sourceTree = "<group>"; };
+		FAB324772DDF44830083EA3B /* cartSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartSectionTableViewCell.swift; sourceTree = "<group>"; };
+		FAB324782DDF44830083EA3B /* cartSectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = cartSectionTableViewCell.xib; sourceTree = "<group>"; };
 		FAF4934B2DD73AAE008A3034 /* LaundryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaundryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF4934E2DD73AAE008A3034 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF493502DD73AAE008A3034 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +104,7 @@
 				FAF493672DD73E41008A3034 /* Extensions.swift */,
 				FAF493502DD73AAE008A3034 /* SceneDelegate.swift */,
 				FAF493652DD73B27008A3034 /* HomeVC.swift */,
-				FA7B8CE42DDD9AC800CF23E7 /* CartsVC.swift */,
+				FA7B8CE62DDD9ECC00CF23E7 /* BasketVC.swift */,
 				FAF493542DD73AAE008A3034 /* Main.storyboard */,
 				FAF4935A2DD73AB0008A3034 /* Assets.xcassets */,
 				FAF4935C2DD73AB0008A3034 /* LaunchScreen.storyboard */,
@@ -104,6 +112,10 @@
 				FAF493572DD73AAE008A3034 /* LaundryApp.xcdatamodeld */,
 				FA8445922DD871BF002A220E /* clothsCollectionViewCell.swift */,
 				FA8445932DD871BF002A220E /* clothsCollectionViewCell.xib */,
+				FA7B8CE82DDEEA6800CF23E7 /* CartTableViewCell.swift */,
+				FA7B8CE92DDEEA6800CF23E7 /* CartTableViewCell.xib */,
+				FAB324772DDF44830083EA3B /* cartSectionTableViewCell.swift */,
+				FAB324782DDF44830083EA3B /* cartSectionTableViewCell.xib */,
 			);
 			path = LaundryApp;
 			sourceTree = "<group>";
@@ -173,10 +185,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7B8CEB2DDEEA6800CF23E7 /* CartTableViewCell.xib in Resources */,
 				FAF4935E2DD73AB0008A3034 /* LaunchScreen.storyboard in Resources */,
 				FA8445952DD871BF002A220E /* clothsCollectionViewCell.xib in Resources */,
 				FAF4935B2DD73AB0008A3034 /* Assets.xcassets in Resources */,
 				FAF493562DD73AAE008A3034 /* Main.storyboard in Resources */,
+				FAB3247A2DDF44830083EA3B /* cartSectionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,11 +228,13 @@
 			files = (
 				FAF493682DD73E41008A3034 /* Extensions.swift in Sources */,
 				FAF4934F2DD73AAE008A3034 /* AppDelegate.swift in Sources */,
+				FAB324792DDF44830083EA3B /* cartSectionTableViewCell.swift in Sources */,
 				FAF493662DD73B27008A3034 /* HomeVC.swift in Sources */,
 				FAF493512DD73AAE008A3034 /* SceneDelegate.swift in Sources */,
 				FAF493592DD73AAE008A3034 /* LaundryApp.xcdatamodeld in Sources */,
-				FA7B8CE52DDD9AC800CF23E7 /* CartsVC.swift in Sources */,
+				FA7B8CE72DDD9ECC00CF23E7 /* BasketVC.swift in Sources */,
 				FA8445942DD871BF002A220E /* clothsCollectionViewCell.swift in Sources */,
+				FA7B8CEA2DDEEA6800CF23E7 /* CartTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

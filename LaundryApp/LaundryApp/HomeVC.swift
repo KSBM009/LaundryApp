@@ -8,7 +8,9 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
+    // MARK: Variable Declarations
+    
     @IBOutlet var itemCollectionView: UICollectionView!
     @IBOutlet var totalCount: UILabel!
     @IBOutlet var mainView: UIView!
@@ -26,6 +28,8 @@ class HomeVC: UIViewController {
     
     var stack1: Int = 0
     var stack2: Int = 0
+    
+    // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +60,9 @@ class HomeVC: UIViewController {
     }
     */
     
-    @IBAction func PressingBtnAction(_ sender: Any) {        
+    // MARK: Button Actions
+    
+    @IBAction func PressingBtnAction(_ sender: Any) {
         
         selectedBtn1 = .pressing
         selectedBtn2 = .men
@@ -100,6 +106,19 @@ class HomeVC: UIViewController {
         selected()
         
     }
+    
+    @IBAction func BasketView(_ sender: Any) {
+            
+        saveArray()
+        let NextVC: BasketVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasketVC") as! BasketVC
+        NextVC.mainArr = arr
+        NextVC.totalCount = Int(totalCount.text ?? "0") ?? 0
+        self.navigationController?.pushViewController(NextVC, animated: true)
+        
+    }
+    
+    
+    // MARK: Functions
     
     func saveArray(){
         
@@ -188,6 +207,7 @@ class HomeVC: UIViewController {
         totalCount.text = String(n)
         
     }
+    
 }
 
 extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
@@ -239,6 +259,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
         itemCollectionView.reloadData()
         saveArray()
     }
+    
 }
 
 extension UIView {
@@ -261,6 +282,8 @@ extension UIView {
     }
 }
 
+// MARK: Data Storing & Required Structs Created
+
 // Required Array
 var reqArray: [itemsDataArray] = []
 
@@ -279,6 +302,7 @@ var DryClean: DataArray = DataArray(men: itemData, women: itemData, household: i
 // Wash&Press Data
 var WashPress: DataArray = DataArray(men: itemData, women: itemData, household: itemData)
 
+// Complete Array Data
 var arr: [DataArray] = [Pressing, DryClean, WashPress]
 
 // To avoid Negative Numbers

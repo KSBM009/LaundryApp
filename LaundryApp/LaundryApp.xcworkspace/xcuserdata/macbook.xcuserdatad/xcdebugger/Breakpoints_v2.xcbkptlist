@@ -14,8 +14,8 @@
             filePath = "LaundryApp/HomeVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "selected()"
             landmarkType = "7">
          </BreakpointContent>
