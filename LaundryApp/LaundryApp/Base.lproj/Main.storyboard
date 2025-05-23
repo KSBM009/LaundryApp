@@ -526,6 +526,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="cartTableView" destination="y6y-bI-BTI" id="Z1Z-ez-mHw"/>
+                        <outlet property="totalItemsLabel" destination="TTo-qZ-7SZ" id="SF9-3X-EWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zc6-8s-NdU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

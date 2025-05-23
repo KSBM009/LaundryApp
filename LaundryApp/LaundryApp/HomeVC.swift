@@ -120,7 +120,7 @@ class HomeVC: UIViewController {
     
     // MARK: Functions
     
-    func saveArray(){
+    func saveArray() {
         
         switch selectedBtn2 {
         case .men:
@@ -138,6 +138,20 @@ class HomeVC: UIViewController {
         }
         totalCountUpdate()
         
+    }
+    
+    func nonZeroItems() {
+        for i in arr {
+            for j in  i.men {
+                if j.count > 0 {}
+            }
+            for j in  i.women {
+                if j.count > 0 {}
+            }
+            for j in  i.household {
+                if j.count > 0 {}
+            }
+        }
     }
     
     func selected() {

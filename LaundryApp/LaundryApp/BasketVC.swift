@@ -12,6 +12,7 @@ class BasketVC: UIViewController {
     // MARK: Variable Declarations
     
     @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var totalItemsLabel: UILabel!
     
     var mainArr: [DataArray] = []
     var totalCount: Int = 0
@@ -31,6 +32,8 @@ class BasketVC: UIViewController {
         cartTableView.delegate = self
         cartTableView.showsVerticalScrollIndicator = false
         cartTableView.showsHorizontalScrollIndicator = false
+        
+        totalItemsLabel.text = String("   Total Items: \(totalCount)")
         
     }
     
@@ -61,7 +64,7 @@ class BasketVC: UIViewController {
 
 extension BasketVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return reqArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
