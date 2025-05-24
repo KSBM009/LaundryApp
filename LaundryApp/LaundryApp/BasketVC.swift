@@ -14,8 +14,11 @@ class BasketVC: UIViewController {
     @IBOutlet weak var cartTableView: UITableView!
     @IBOutlet weak var totalItemsLabel: UILabel!
     
-    var mainArr: [DataArray] = []
+    var pressingArr: DataArray = DataArray()
+    var dryCleanArr: DataArray = DataArray()
+    var washFoldArr: DataArray = DataArray()
     var totalCount: Int = 0
+    var selectedBtn1: selBtn1
     
     // MARK: View Lifecycle
     
@@ -64,13 +67,39 @@ class BasketVC: UIViewController {
 
 extension BasketVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reqArray.count
+        switch section {
+        case 0:
+            return pressingArr.men.count + pressingArr.women.count + pressingArr.household.count
+        
+        case 1:
+            return dryCleanArr.men.count + dryCleanArr.women.count + dryCleanArr.household.count
+            
+        case 2:
+            return washFoldArr.men.count + washFoldArr.women.count + washFoldArr.household.count
+            
+        default:
+            return mainArr.count
+            
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Cell Registration
         let cell = cartTableView.dequeueReusableCell(withIdentifier: CartTableViewCell.identifier, for: indexPath) as! CartTableViewCell
+        
+        switch selectedBtn1 {
+        case .pressing:
+            let item = pressingArr[indexPath.item]
+            
+        case .dryClean:
+            let item = dryCleanArr[indexPath.item]
+            
+        case .washPress:
+            let item = washFoldArr[indexPath.item]
+            
+        }
+        
         return cell
         
     }
@@ -114,3 +143,10 @@ struct openClose {
 }
 
 var isOpen: openClose = openClose()
+
+struct itemDataCart {
+    let image:String
+    let name:String
+    var count:Int
+    var category:selBtn2
+}

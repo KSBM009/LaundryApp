@@ -111,14 +111,17 @@ class HomeVC: UIViewController {
             
         saveArray()
         let NextVC: BasketVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasketVC") as! BasketVC
-        NextVC.mainArr = arr
+        nonZeroItems()
+        NextVC.pressingArr = mainArr[0]
+        NextVC.dryCleanArr = mainArr[1]
+        NextVC.washFoldArr = mainArr[2]
         NextVC.totalCount = Int(totalCount.text ?? "0") ?? 0
         self.navigationController?.pushViewController(NextVC, animated: true)
         
     }
     
     
-    // MARK: Functions
+    // MARK: Custom Functions
     
     func saveArray() {
         
@@ -141,17 +144,23 @@ class HomeVC: UIViewController {
     }
     
     func nonZeroItems() {
-        for i in arr {
-            for j in  i.men {
-                if j.count > 0 {}
+        // Track index
+        for (index, dataArray) in arr.enumerated() {
+            for item in dataArray.men where item.count > 0 {
+                // Use the index
+                mainArr[index].men.append(item)
             }
-            for j in  i.women {
-                if j.count > 0 {}
+            for item in dataArray.women where item.count > 0 {
+                mainArr[index].women.append(item)
             }
-            for j in  i.household {
-                if j.count > 0 {}
+            for item in dataArray.household where item.count > 0 {
+                mainArr[index].household.append(item)
             }
+//            print(mainArr[index].men)
+//            print(mainArr[index].women)
+//            print(mainArr[index].household)
         }
+//        print(mainArr)
     }
     
     func selected() {
@@ -309,15 +318,21 @@ var itemData: [itemsDataArray] = [itemsDataArray(image: "shirt", name: "Shirt"),
 
 // Pressing Data
 var Pressing: DataArray = DataArray(men: itemData, women: itemData, household: itemData)
+var Pressing1: DataArray = DataArray(men: [], women: [], household: [])
 
 // DryClean Data
 var DryClean: DataArray = DataArray(men: itemData, women: itemData, household: itemData)
+var DryClean1: DataArray = DataArray(men: [], women: [], household: [])
 
 // Wash&Press Data
 var WashPress: DataArray = DataArray(men: itemData, women: itemData, household: itemData)
+var WashPress1: DataArray = DataArray(men: [], women: [], household: [])
 
 // Complete Array Data
 var arr: [DataArray] = [Pressing, DryClean, WashPress]
+
+// Non Empty Array
+var mainArr: [DataArray] = [Pressing1, DryClean1, WashPress1]
 
 // To avoid Negative Numbers
 @propertyWrapper
