@@ -18,7 +18,7 @@ class BasketVC: UIViewController {
     var dryCleanArr: DataArray = DataArray()
     var washFoldArr: DataArray = DataArray()
     var totalCount: Int = 0
-    var selectedBtn1: selBtn1
+    var cartItems: [itemDataCart] = []
     
     // MARK: View Lifecycle
     

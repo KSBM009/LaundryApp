@@ -112,9 +112,7 @@ class HomeVC: UIViewController {
         saveArray()
         let NextVC: BasketVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasketVC") as! BasketVC
         nonZeroItems()
-        NextVC.pressingArr = mainArr[0]
-        NextVC.dryCleanArr = mainArr[1]
-        NextVC.washFoldArr = mainArr[2]
+        NextVC.cartItems = Items
         NextVC.totalCount = Int(totalCount.text ?? "0") ?? 0
         self.navigationController?.pushViewController(NextVC, animated: true)
         
@@ -372,3 +370,5 @@ enum selBtn2 {
     case women
     case household
 }
+
+var Items: [itemDataCart] = []
