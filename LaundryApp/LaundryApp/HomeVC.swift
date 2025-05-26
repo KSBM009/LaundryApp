@@ -239,8 +239,8 @@ class HomeVC: UIViewController {
 extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemData.count
-//        return 10
     }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = itemCollectionView.dequeueReusableCell(withReuseIdentifier: clothsCollectionViewCell.identifier, for: indexPath) as! clothsCollectionViewCell
         
@@ -270,6 +270,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
             return cell
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (UIScreen.main.bounds.width - 40 )/2, height: (UIScreen.main.bounds.width - 40 )/2)
     }
@@ -375,5 +376,3 @@ enum selBtn2 {
     case women
     case household
 }
-
-//var Items: [itemDataCart] = []

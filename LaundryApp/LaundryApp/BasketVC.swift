@@ -18,7 +18,7 @@ class BasketVC: UIViewController {
     var dryCleanArr: DataArray = DataArray(men: [], women: [], household: [])
     var washFoldArr: DataArray = DataArray(men: [], women: [], household: [])
     var totalCount: Int = 0
-    var selectedBtn1: selBtn1 = .pressing
+    var sectionCount: [Int] = [0,0,0]
     
     // Add this for section titles
     let mainArr = ["Pressing", "Dry-Clean", "Wash & Fold"]
@@ -32,6 +32,8 @@ class BasketVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        updateSectionCounts()
         
         cartTableView.register(CartTableViewCell.nib(), forCellReuseIdentifier: CartTableViewCell.identifier)
         cartTableView.register(cartSectionTableViewCell.nib(), forCellReuseIdentifier: cartSectionTableViewCell.identifier)
@@ -56,6 +58,20 @@ class BasketVC: UIViewController {
         
         self.navigationController?.popViewController(animated: true)
         
+    }
+    
+    // MARK: Helper Functions
+    
+    func updateSectionCounts() {
+        sectionCount[0] = pressingArr.men.reduce(0) { $0 + $1.counts }
+                      + pressingArr.women.reduce(0) { $0 + $1.counts }
+                      + pressingArr.household.reduce(0) { $0 + $1.counts }
+        sectionCount[1] = dryCleanArr.men.reduce(0) { $0 + $1.counts }
+                      + dryCleanArr.women.reduce(0) { $0 + $1.counts }
+                      + dryCleanArr.household.reduce(0) { $0 + $1.counts }
+        sectionCount[2] = washFoldArr.men.reduce(0) { $0 + $1.counts }
+                      + washFoldArr.women.reduce(0) { $0 + $1.counts }
+                      + washFoldArr.household.reduce(0) { $0 + $1.counts }
     }
     
     /*
@@ -155,6 +171,8 @@ extension BasketVC: UITableViewDataSource, UITableViewDelegate {
         
         // Set the section title
         headerView.Category.text = mainArr[section]
+        
+        headerView.count.text = String(sectionCount[section])
             
         return headerView
     }
@@ -175,10 +193,3 @@ struct openClose {
 }
 
 var isOpen: openClose = openClose()
-
-//struct itemDataCart {
-//    let image:String
-//    let name:String
-//    var count:Int
-//    var category:selBtn2
-//}
