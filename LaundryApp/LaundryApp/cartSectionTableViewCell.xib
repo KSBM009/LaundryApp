@@ -74,6 +74,7 @@
             <connections>
                 <outlet property="Category" destination="WyH-Ur-O5x" id="DiC-Cr-nJH"/>
                 <outlet property="count" destination="2Uj-XE-Uau" id="E5g-SL-2yc"/>
+                <outlet property="showBtn" destination="Ou8-m6-r9G" id="VWN-Q8-lir"/>
             </connections>
             <point key="canvasLocation" x="139" y="20"/>
         </tableViewCell>

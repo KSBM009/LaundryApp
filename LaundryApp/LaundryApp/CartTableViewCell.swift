@@ -12,6 +12,7 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var clothImg: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var No: UILabel!
+    @IBOutlet weak var subCategory: UILabel!
     
     static let identifier = "CartTableViewCell"
     

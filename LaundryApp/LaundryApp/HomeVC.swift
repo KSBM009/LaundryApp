@@ -112,7 +112,10 @@ class HomeVC: UIViewController {
         saveArray()
         let NextVC: BasketVC = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "BasketVC") as! BasketVC
         nonZeroItems()
-        NextVC.cartItems = Items
+//        NextVC.cartItems = Items
+        NextVC.pressingArr = mainArr[0]
+        NextVC.dryCleanArr = mainArr[1]
+        NextVC.washFoldArr = mainArr[2]
         NextVC.totalCount = Int(totalCount.text ?? "0") ?? 0
         self.navigationController?.pushViewController(NextVC, animated: true)
         
@@ -142,23 +145,25 @@ class HomeVC: UIViewController {
     }
     
     func nonZeroItems() {
+        // Clear the global mainArr first
+        mainArr = [
+            DataArray(men: [], women: [], household: []),
+            DataArray(men: [], women: [], household: []),
+            DataArray(men: [], women: [], household: [])
+        ]
         // Track index
         for (index, dataArray) in arr.enumerated() {
-            for item in dataArray.men where item.count > 0 {
-                // Use the index
+            for item in dataArray.men where item.counts > 0 {
+                // Use the Index to append to the correct section of mainArr
                 mainArr[index].men.append(item)
             }
-            for item in dataArray.women where item.count > 0 {
+            for item in dataArray.women where item.counts > 0 {
                 mainArr[index].women.append(item)
             }
-            for item in dataArray.household where item.count > 0 {
+            for item in dataArray.household where item.counts > 0 {
                 mainArr[index].household.append(item)
             }
-//            print(mainArr[index].men)
-//            print(mainArr[index].women)
-//            print(mainArr[index].household)
         }
-//        print(mainArr)
     }
     
     func selected() {
@@ -216,13 +221,13 @@ class HomeVC: UIViewController {
         var n: Int = 0
         for i in arr {
             for j in  i.men {
-                n += j.count
+                n += j.counts
             }
             for j in  i.women {
-                n += j.count
+                n += j.counts
             }
             for j in  i.household {
-                n += j.count
+                n += j.counts
             }
         }
         totalCount.text = String(n)
@@ -247,7 +252,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
             // Set the image, name and code for each item in the cell from the Array
             cell.itemImg.image = UIImage(named: item.image)
             cell.itemName.text = item.name
-            cell.itemCount.text = "\(item.count)"
+            cell.itemCount.text = "\(item.counts)"
             
             // Setting Tag for Increment and Decrement Buttons
             cell.DecrementBtn.tag = indexPath.row
@@ -270,13 +275,13 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollec
     }
     
     @objc func decrementCount(sender: UIButton) {
-        reqArray[sender.tag].count-=1
+        reqArray[sender.tag].counts-=1
         itemCollectionView.reloadData()
         saveArray()
     }
     
     @objc func incrementCount(sender: UIButton) {
-        reqArray[sender.tag].count+=1
+        reqArray[sender.tag].counts+=1
         itemCollectionView.reloadData()
         saveArray()
     }
@@ -350,13 +355,13 @@ struct NonNegative {
 struct itemsDataArray {
     var image:String = ""
     let name:String
-    @NonNegative var count:Int = 0
+    @NonNegative var counts:Int = 0
 }
 
 struct DataArray {
-    var men:[itemsDataArray] = itemData
-    var women:[itemsDataArray] = itemData
-    var household:[itemsDataArray] = itemData
+    var men:[itemsDataArray]
+    var women:[itemsDataArray]
+    var household:[itemsDataArray]
 }
 
 enum selBtn1 {
@@ -371,4 +376,4 @@ enum selBtn2 {
     case household
 }
 
-var Items: [itemDataCart] = []
+//var Items: [itemDataCart] = []

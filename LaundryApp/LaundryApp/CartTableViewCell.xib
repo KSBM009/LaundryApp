@@ -151,6 +151,7 @@
                 <outlet property="No" destination="RDe-1e-ThH" id="1eg-kQ-Gv9"/>
                 <outlet property="clothImg" destination="8ci-RA-STT" id="aXa-iB-rOw"/>
                 <outlet property="name" destination="oE3-PI-jnP" id="bWy-Sr-g6u"/>
+                <outlet property="subCategory" destination="Ku9-Cc-c2j" id="RRY-Dd-Pa1"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
         </tableViewCell>

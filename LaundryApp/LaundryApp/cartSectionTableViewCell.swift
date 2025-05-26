@@ -11,6 +11,7 @@ class cartSectionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var Category: UILabel!
     @IBOutlet weak var count: UILabel!
+    @IBOutlet weak var showBtn: UIButton!
     
     static let identifier = "cartSectionTableViewCell"
     
