@@ -22,8 +22,6 @@ class BasketVC: UIViewController {
     
     // Add this for section titles
     let mainArr = ["Pressing", "Dry-Clean", "Wash & Fold"]
-
-//    var cartItems: [itemDataCart] = []
     
     // MARK: View Lifecycle
     
@@ -187,7 +185,7 @@ extension BasketVC: UITableViewDataSource, UITableViewDelegate {
 }
 
 struct openClose {
-    var pressing: Bool = false
+    var pressing: Bool = true
     var dryClean: Bool = false
     var washFold: Bool = false
 }
