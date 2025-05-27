@@ -13,6 +13,8 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var No: UILabel!
     @IBOutlet weak var subCategory: UILabel!
+    @IBOutlet weak var decrementBtn: UIButton!
+    @IBOutlet weak var incrementBtn: UIButton!
     
     static let identifier = "CartTableViewCell"
     

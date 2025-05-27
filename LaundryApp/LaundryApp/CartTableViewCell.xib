@@ -150,6 +150,8 @@
             <connections>
                 <outlet property="No" destination="RDe-1e-ThH" id="1eg-kQ-Gv9"/>
                 <outlet property="clothImg" destination="8ci-RA-STT" id="aXa-iB-rOw"/>
+                <outlet property="decrementBtn" destination="0fo-4F-BzA" id="BBZ-TH-s9u"/>
+                <outlet property="incrementBtn" destination="vX8-7J-Txd" id="4Ai-CD-Gwd"/>
                 <outlet property="name" destination="oE3-PI-jnP" id="bWy-Sr-g6u"/>
                 <outlet property="subCategory" destination="Ku9-Cc-c2j" id="RRY-Dd-Pa1"/>
             </connections>

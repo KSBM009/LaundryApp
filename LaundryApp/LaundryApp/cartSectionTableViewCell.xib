@@ -36,7 +36,7 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uj-XE-Uau">
                                 <rect key="frame" x="250" y="14.666666666666664" width="30" height="21"/>
@@ -80,7 +80,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="chevron.down" catalog="system" width="128" height="70"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
