@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="cartSectionTableViewCell" customModule="LaundryApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cCV-E2-h2j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyH-Ur-O5x">
+                                <rect key="frame" x="15" y="10" width="155" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3fj-av-KAJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ou8-m6-r9G">
+                                <rect key="frame" x="280" y="10" width="35" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="XR8-9b-uIm"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uj-XE-Uau">
+                                <rect key="frame" x="250" y="14.666666666666664" width="30" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="cno-F3-9Qf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.79000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ou8-m6-r9G" firstAttribute="centerY" secondItem="WyH-Ur-O5x" secondAttribute="centerY" id="C4M-La-lhH"/>
+                            <constraint firstItem="WyH-Ur-O5x" firstAttribute="centerY" secondItem="cCV-E2-h2j" secondAttribute="centerY" id="P5Y-Kf-tmB"/>
+                            <constraint firstItem="Ou8-m6-r9G" firstAttribute="leading" secondItem="2Uj-XE-Uau" secondAttribute="trailing" id="PY1-N4-ZPe"/>
+                            <constraint firstAttribute="trailing" secondItem="Ou8-m6-r9G" secondAttribute="trailing" constant="5" id="RLo-cb-Fx8"/>
+                            <constraint firstItem="WyH-Ur-O5x" firstAttribute="leading" secondItem="cCV-E2-h2j" secondAttribute="leading" constant="15" id="SRw-h6-J2W"/>
+                            <constraint firstItem="Ou8-m6-r9G" firstAttribute="height" secondItem="WyH-Ur-O5x" secondAttribute="height" id="X01-Fs-Pjh"/>
+                            <constraint firstItem="2Uj-XE-Uau" firstAttribute="height" secondItem="Ou8-m6-r9G" secondAttribute="height" multiplier="0.7" id="dKl-m6-5MX"/>
+                            <constraint firstItem="2Uj-XE-Uau" firstAttribute="centerY" secondItem="Ou8-m6-r9G" secondAttribute="centerY" id="kPG-c8-ew4"/>
+                            <constraint firstAttribute="trailing" secondItem="WyH-Ur-O5x" secondAttribute="trailing" constant="150" id="yKv-O1-YKz"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="cCV-E2-h2j" secondAttribute="bottom" id="2CT-ji-xaA"/>
+                    <constraint firstItem="cCV-E2-h2j" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MI2-Z5-ODT"/>
+                    <constraint firstAttribute="trailing" secondItem="cCV-E2-h2j" secondAttribute="trailing" id="aXu-mQ-3fE"/>
+                    <constraint firstItem="cCV-E2-h2j" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yeZ-fZ-4K7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="systemYellowColor"/>
+            <connections>
+                <outlet property="Category" destination="WyH-Ur-O5x" id="DiC-Cr-nJH"/>
+                <outlet property="count" destination="2Uj-XE-Uau" id="E5g-SL-2yc"/>
+                <outlet property="showBtn" destination="Ou8-m6-r9G" id="VWN-Q8-lir"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="20"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
